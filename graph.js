@@ -60,7 +60,25 @@ class Graph {
 	}
 
 	// this function returns an array of Node values using BFS
-	breadthFirstSearch(start) {}
+	breadthFirstSearch(start) {
+		const arr = [];
+		const seen = new Set();
+		const queue = [start];
+		let i = 0;
+		while (i < queue.length) {
+			const vertex = queue[i];
+			if (!seen.has(vertex)) {
+				arr.push(vertex.value);
+				seen.add(vertex);
+				for (let neighbor of vertex.adjacent) {
+					queue.push(neighbor);
+				}
+			}
+			i++;
+		}
+
+		return arr;
+	}
 }
 
 module.exports = { Graph, Node };
