@@ -53,26 +53,26 @@ describe("addEdge", function () {
 	});
 });
 
-// describe("removeEdge", function () {
-// 	it("should remove the vertices from the adjacency list", function () {
-// 		let graph = new Graph();
-// 		let a = new Node("A");
-// 		let b = new Node("B");
-// 		let c = new Node("C");
-// 		let d = new Node("D");
-// 		graph.addVertices([a, b, c, d]);
-// 		graph.addEdge(a, b);
-// 		graph.addEdge(a, c);
-// 		graph.addEdge(b, d);
-// 		graph.addEdge(c, d);
+describe("removeEdge", function () {
+	it("should remove the vertices from the adjacency list", function () {
+		let graph = new Graph();
+		let a = new Node("A");
+		let b = new Node("B");
+		let c = new Node("C");
+		let d = new Node("D");
+		graph.addVertices([a, b, c, d]);
+		graph.addEdge(a, b);
+		graph.addEdge(a, c);
+		graph.addEdge(b, d);
+		graph.addEdge(c, d);
 
-// 		graph.removeEdge(b, a);
-// 		graph.removeEdge(c, d);
+		graph.removeEdge(b, a);
+		graph.removeEdge(c, d);
 
-// 		expect(a.adjacent).not.toContain(b);
-// 		expect(c.adjacent).not.toContain(d);
-// 	});
-// });
+		expect(a.adjacent).not.toContain(b);
+		expect(c.adjacent).not.toContain(d);
+	});
+});
 
 // describe("removeVertex", function() {
 //   it("should remove the vertex as well as any edges", function() {
